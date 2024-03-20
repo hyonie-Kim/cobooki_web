@@ -6,20 +6,49 @@
     <link rel="stylesheet" href="style.css" />
     <title>Cobooki</title>
     <script src="main.js" defer></script>
-    <style></style>
+    <script src="https://kit.fontawesome.com/a39d8980cc.js" crossorigin="anonymous"></script>
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    </style>
   </head>
   <body>
     <div id="wrap">
       <header>
         <nav class="nav">
           <div class="nav_logo">
-            <h1><a href="">Logo</a></h1>
+            <h1>
+              <a href="/"><img src="/images/imgLogo.png" alt="Logo"></a>
+            </h1>
+            
           </div>
 
           <ul class="nav_menu">
-            <li><a href="">Menu01</a></li>
-            <li><a href="">Menu01</a></li>
-            <li><a href="">Menu01</a></li>
+            <li><a href="#">Menu01</a></li>
+            <li><a href="#">Menu02</a></li>
+            <li><a href="#">Menu03</a></li>
           </ul>
 
           <ul class="nav_login">
@@ -27,16 +56,56 @@
             <li>/</li>
             <li><a href="">회원가입</a></li>
           </ul>
-          <a href="#" class="nav_toogleBtn">취소</a>
+          <a href="#" class="nav_toogleBtn"><i class="fa-solid fa-bars"></i></a>
         </nav>
       </header>
+        <aside class="banner">
+          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide>Slide 1</swiper-slide>
+            <swiper-slide>Slide 2</swiper-slide>
+            <swiper-slide>Slide 3</swiper-slide>
+            <swiper-slide>Slide 4</swiper-slide>
+            <swiper-slide>Slide 5</swiper-slide>
+          </swiper-container>
+        </aside>
+        <section>
+          <article class="book_container">
+            <h2>최신서적</h2>
+             <ul class="books_list">
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
+             
+            </ul>
 
-      <div id="container">
-        <aside>광고 배너</aside>
-        <section><h2>콘텐츠1</h2></section>
-        <section><h2>콘텐츠2</h2></section>
-      </div>
-      <footer>footer</footer>
+          </article>
+          <!-- <article>
+            <h2>최신서적2</h2>
+            <p>콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2</p>
+          </article> -->
+        </section>
+       
+      
+      
     </div>
+    <footer class="footer"><div class="foorer_container">
+      <p>Copyrigh 2024 Kosta_HYONIE,. All ⓒ rights reserved</p>
+      </div>
+      
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  </script>
   </body>
 </html>
