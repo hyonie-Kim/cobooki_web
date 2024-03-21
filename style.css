@@ -7,14 +7,6 @@ body {
   margin: 0;
 }
 
-.header {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-}
-
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -25,10 +17,11 @@ li {
 
 aside {
   width: 100%;
-  padding-top: 85px;
+  padding-top: 103px;
   background-color: #beffdc;
-  height: 300px;
+  height: 330px;
 }
+
 section {
   width: 100%;
   background-color: blanchedalmond;
@@ -38,70 +31,50 @@ article {
   border: 1px solid grey;
 }
 
-.nav {
-  max-width: 1000px;
-  height: 70px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--background-color);
-  padding: 8px 12px;
+/* 광고배너 */
+swiper-slide{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.nav_logo h1 a {
-  font-size: 24px;
-  color: var(---accent-color);
+.first-Banner{
+  background-image: url("/images/banner01.png");
 }
-.nav_logo h1 a img {
-  width: 150px;
+.second-Banner{
+  background-image: url("/images/banner02.png");
 }
-
-.nav_menu {
-  display: flex;
-
-  list-style: none;
-  padding-left: 0;
-}
-
-.nav_menu li {
-  padding: 8px 12px;
-}
-
-.nav_menu li:hover {
-  background-color: var(---accent-color);
-  border-radius: 4px;
-}
-
-.nav_menu li:hover a {
-  color: var(--background-color);
-}
-
-.nav_login {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
-
-.nav_login li {
-  padding: 8px 12px;
-}
-
-.nav_toogleBtn {
-  display: none;
-  position: absolute;
-  right: 32px;
-  font-size: 24px;
-  color: var(---accent-color);
+.third-Banner{
+  background-image: url("/images/banner03.png");
 }
 
 /* 서적리스트 */
+.books_container{
+
+}
+.books_container > h2{
+  margin-left: 30px;
+  width: 94%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #adadad;
+}
+.front {
+  position: absolute;
+  left: 0px;
+  background-color:green;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+
+}
+
 .books_list {
   height: 80%;
   display: grid;
-  gap: 15px;
+  /* gap: 15px; */
+  gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  padding: 0 80px;
+  padding: 0;
 }
 
 .books_list li {
@@ -115,8 +88,9 @@ article {
 #wrap {
   height: auto;
   min-height: 100%;
-  max-width: 80%;
-  margin: 0 140px;
+  max-width: 1023px;
+  margin: 0 auto;
+  /* margin: 0 40px; */
   padding-bottom: 45px;
   display: flex;
   flex-direction: column;
@@ -124,19 +98,8 @@ article {
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 45px;
-  background-color: #ececec;
-  border-top: 1px solid#cacaca;
 
-  position: relative;
-  transform: translateY(-100%);
-  /* bottom: 0; */
-}
-.foorer_container {
-  text-align: center;
-}
+
 @media screen and (max-width: 768px) {
   #wrap {
     height: auto;
@@ -150,33 +113,31 @@ article {
     position: relative;
     align-items: center;
   }
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px 24px;
-  }
-
-  .nav_menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .nav_menu li {
-    width: 100%;
-    text-align: center;
-  }
-  .nav_login {
-    display: none;
-    justify-content: center;
-    width: 100%;
-  }
-  .nav_toogleBtn {
-    display: block;
-  }
-
-  .nav_menu.active,
-  .nav_login.active {
-    display: flex;
-  }
 }
+
+@media screen and (min-width: 992px) { 
+
+  #wrap {
+    /* margin: 0 75px; */
+  }
+    
+
+  aside {
+    width: 100%;
+    height: 380px;
+  }
+ } 
+
+
+ @media screen and (min-width: 1200px ) { 
+
+  #wrap {
+    /* margin: 0 140px; */
+  }
+
+  aside {
+    width: 100%;
+    height: 400px;
+  }
+ 
+ }
