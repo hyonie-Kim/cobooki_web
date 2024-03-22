@@ -18,8 +18,9 @@ li {
 aside {
   width: 100%;
   padding-top: 103px;
-  background-color: #beffdc;
   height: 330px;
+
+  /* height: 90%; */
 }
 
 section {
@@ -32,25 +33,40 @@ article {
 }
 
 /* 광고배너 */
-swiper-slide{
+.swiper {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.swiper-slide {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.first-Banner{
-  background-image: url("/images/banner01.png");
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  bottom: 200px;
 }
-.second-Banner{
-  background-image: url("/images/banner02.png");
+
+.first-Banner {
+  background-image: url('/images/banner11.jpg');
 }
-.third-Banner{
-  background-image: url("/images/banner03.png");
+.second-Banner {
+  background-image: url('/images/banner04.jpg');
+}
+.third-Banner {
+  background-image: url('/images/banner07.jpg');
 }
 
 /* 서적리스트 */
-.books_container{
-
+.books_container {
 }
-.books_container > h2{
+.books_container > h2 {
   margin-left: 30px;
   width: 94%;
   padding-bottom: 10px;
@@ -59,15 +75,58 @@ swiper-slide{
 .front {
   position: absolute;
   left: 0px;
-  background-color:green;
+  background-color: green;
   color: white;
+  top: -40px;
   border-radius: 50px;
   text-align: center;
   line-height: 25px;
   font-weight: bold;
-
 }
 
+/* 도서 */
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.book_item {
+  width: 240px;
+  /* height: 90%; */
+  display: flex;
+  justify-content: center;
+  outline: 2px solid #547f5b;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.book_item > a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+}
+
+.book-image {
+  width: 100%;
+  height: 75%;
+  margin: auto 0px;
+  background-size: contain;
+  background-position: -5px 40px;
+  background-repeat: no-repeat;
+}
+
+.book_info {
+  width: 90%;
+  height: 20%;
+  padding-top: 10px;
+}
 .books_list {
   height: 80%;
   display: grid;
@@ -81,9 +140,9 @@ swiper-slide{
   text-align: center;
 }
 
-.books_list li a img {
+/* .books_list li a img {
   width: 200px;
-}
+} */
 
 #wrap {
   height: auto;
@@ -98,8 +157,6 @@ swiper-slide{
   align-items: center;
 }
 
-
-
 @media screen and (max-width: 768px) {
   #wrap {
     height: auto;
@@ -113,24 +170,23 @@ swiper-slide{
     position: relative;
     align-items: center;
   }
+  aside {
+    padding-top: 120px;
+  }
 }
 
-@media screen and (min-width: 992px) { 
-
+@media screen and (min-width: 992px) {
   #wrap {
     /* margin: 0 75px; */
   }
-    
 
   aside {
     width: 100%;
     height: 380px;
   }
- } 
+}
 
-
- @media screen and (min-width: 1200px ) { 
-
+@media screen and (min-width: 1200px) {
   #wrap {
     /* margin: 0 140px; */
   }
@@ -139,5 +195,4 @@ swiper-slide{
     width: 100%;
     height: 400px;
   }
- 
- }
+}

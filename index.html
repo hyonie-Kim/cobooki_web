@@ -7,94 +7,168 @@
     <title>Cobooki</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // 헤더와 푸터를 동적으로 로드하는 함수
-        function includeHTML() {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-        }
+      // 헤더와 푸터를 동적으로 로드하는 함수
+      function includeHTML() {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+      }
     </script>
-
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <style>
-    swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
+
   <body onload="includeHTML()">
-      <!-- 헤더를 로드할 div -->
-      <div id="header"></div>
-      <div id="wrap">
-        <aside class="banner">
-          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
-            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-            <swiper-slide class="first-Banner"></swiper-slide>
-            <swiper-slide class="second-Banner"></swiper-slide>
-            <swiper-slide class="third-Banner"></swiper-slide>
-            <!-- <swiper-slide>Slide 4</swiper-slide>
-            <swiper-slide>Slide 5</swiper-slide> -->
-          </swiper-container>
-        </aside>
-        <section>
-          <article class="books_container">
-            <h2>최신서적</h2>
-             <ul class="books_list">
-              <li class="book_item"> 
-                  <a href="#">
-                    <h4 class="category front">프론트엔드</h4>
-                    <div class="book-container">
-                      <img src="/images/noImage.png" alt="도서준비">
-                      <div>
-                        <h5 class="book_name">리액트 도서</h5>
-                        <p class="book_price">30,000원</p>
-                      </div>
-                    </div>
-                    
-                  </a>
-                
-              </li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-              <li class="book_item"><a href="#"><img src="/images/noImage.png" alt=""></a></li>
-            </ul>
-          </article>
-          <!-- <article>
+    <!-- 헤더를 로드할 div -->
+    <div id="header"></div>
+    <div id="wrap">
+      <aside class="banner">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide first-Banner"></div>
+            <div class="swiper-slide second-Banner"></div>
+            <div class="swiper-slide third-Banner"></div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+        </div>
+      </aside>
+      <section>
+        <article class="books_container">
+          <h2>최신서적</h2>
+          <ul class="books_list">
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <!-- <img
+                    class="book-image"
+                    style="background-image: url('/images/noImage.png');"
+                    src="/images/noImage.png"
+                    alt="도서준비"
+                  /> -->
+                  <div
+                    class="book-image"
+                    style="background-image: url('/images/noImage.png')"
+                  ></div>
+                  <div class="book_info">
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <img
+                    class="book-image"
+                    src="/images/noImage.png"
+                    alt="도서준비"
+                  />
+                  <div>
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <img
+                    class="book-image"
+                    src="/images/noImage.png"
+                    alt="도서준비"
+                  />
+                  <div>
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <img
+                    class="book-image"
+                    src="/images/noImage.png"
+                    alt="도서준비"
+                  />
+                  <div>
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#"
+                ><img class="book-image" src="/images/noImage.png" alt=""
+              /></a>
+            </li>
+            <li class="book_item">
+              <a href="#"
+                ><img class="book-image" src="/images/noImage.png" alt=""
+              /></a>
+            </li>
+            <li class="book_item">
+              <a href="#"
+                ><img class="book-image" src="/images/noImage.png" alt=""
+              /></a>
+            </li>
+            <li class="book_item">
+              <a href="#"
+                ><img class="book-image" src="/images/noImage.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </article>
+        <!-- <article>
             <h2>최신서적2</h2>
             <p>콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2콘텐츠2</p>
           </article> -->
-        </section>
+      </section>
     </div>
-     <!-- 푸터를 로드할 div -->
+    <!-- 푸터를 로드할 div -->
     <div id="footer"></div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // 스와이프 옵션
+        direction: 'horizontal',
+        // loop: true,
+        centeredSlides: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
   </body>
 </html>
