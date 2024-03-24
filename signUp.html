@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css" />
+    <title>회원가입</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function includeHTML() {
+        $('#header').load('header.html');
+      }
+    </script>
+  </head>
+  <body onload="includeHTML()">
+    <div id="header"></div>
+    <main>
+      <section class="signUp">
+        <div class="signUp_title">
+          <div class="signUp_icon">
+            <h3>회원가입</h3>
+            <span class="material-symbols-outlined"> assignment </span>
+          </div>
+
+          <div></div>
+          <h5>회원가입을 통해 더 다양한 혜택을 경험해 보세요.</h5>
+        </div>
+        <form action="">
+          <div class="content_user">
+            <div>
+              <label for="email">이메일 주소</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="이메일 주소를 입력하세요."
+              />
+            </div>
+            <div>
+              <label for="password">비밀번호</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="비밀번호를 입력하세요."
+              />
+            </div>
+            <div>
+              <label for="password_check">비밀번호 확인</label>
+              <input
+                type="password"
+                id="password_check"
+                placeholder="비밀번호를 다시 입력하세요."
+              />
+            </div>
+            <div>
+              <label for="name">이름</label>
+              <input type="text" id="name" placeholder="이름을 입력하세요." />
+            </div>
+            <div>
+              <label for="phone">연락처</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="'-' 제외하고 입력하세요."
+              />
+            </div>
+          </div>
+          <div class="content_address">
+            <h4>주소지 정보</h4>
+            <div>
+              <label for="address">기본 주소</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="주소를 입력하세요."
+              />
+            </div>
+            <div>
+              <label for="detailAddress">상세 주소</label>
+              <input
+                type="text"
+                id="detailAddress"
+                placeholder="상세 주소를 입력하세요."
+              />
+            </div>
+          </div>
+
+          <button>회원 가입</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

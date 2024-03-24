@@ -1,0 +1,126 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+input {
+  width: 220px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #636e72;
+  box-sizing: border-box;
+}
+
+.signUp {
+  font-family: 'NanumSquareNeo-Variable';
+  position: absolute;
+  width: 600px;
+  height: 700px;
+  top: 130px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #adadad;
+  border-radius: 20px;
+}
+
+.signUp_title {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signUp_title div {
+  width: 80%;
+  border-bottom: 1px solid #adadad;
+}
+
+.signUp_title .signUp_icon {
+  width: 104px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: none;
+}
+
+.signUp form {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+form .content_user {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+form .content_address > div,
+form .content_user > div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+form .content_address {
+  width: 80%;
+  height: 52%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+form .content_address > h4 {
+  width: 90%;
+  top: 15px;
+  left: 20px;
+  text-align: left;
+}
+
+form .content_address > div {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.content_address > div > label,
+.content_user > div > label {
+  width: 120px;
+}
+
+button {
+  width: 50%;
+  height: 70px;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  background-color: #547f5b;
+  font-weight: bold;
+  border: 1px solid #547f5b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: #547f5b;
+  border: 1px solid #547f5b;
+}
