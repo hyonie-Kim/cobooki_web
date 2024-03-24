@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      function includeHTML() {
+        $('#header').load('header.html');
+      }
+    </script>
+  </head>
+  <body onload="includeHTML()">
+    <div id="header"></div>
+    <form class="login_form" action="">
+      <h2>로그인</h2>
+      <h6></h6>
+      <h5>
+        가입 하신 아이디로 로그인하시면 더욱 편리하게 이용하실수 있습니다.
+      </h5>
+      <div class="login_id">
+        <span class="material-symbols-outlined"> face </span>
+        <input type="text" class="id" placeholder="이메일 주소를 입력하세요." />
+      </div>
+      <div class="login_password">
+        <span class="material-symbols-outlined">lock</span>
+        <input
+          type="password"
+          class="password"
+          placeholder="비밀번호를 입력하세요."
+        />
+      </div>
+      <div class="login_auto">
+        <input type="checkbox" class="check" />
+        <h8>자동로그인</h8>
+      </div>
+      <button type="button" class="login_btn">로그인</button>
+      <button type="button" class="signIn_btn">회원가입</button>
+    </form>
+  </body>
+</html>
