@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Cobooki</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -49,19 +50,58 @@
               <a href="#">
                 <h4 class="category front">프론트엔드</h4>
                 <div class="book-container">
-                  <!-- <img
-                    class="book-image"
-                    style="background-image: url('/images/noImage.png');"
-                    src="/images/noImage.png"
-                    alt="도서준비"
-                  /> -->
                   <div
                     class="book-image"
-                    style="background-image: url('/images/noImage.png')"
+                    style="background-image: url('/images/preparingImage.png')"
                   ></div>
                   <div class="book_info">
                     <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">30,000원</p>
+                    <p class="book_price">가격: 30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category cs">CS지식</h4>
+                <div class="book-container">
+                  <div
+                    class="book-image"
+                    style="background-image: url('/images/preparingImage.png')"
+                  ></div>
+                  <div class="book_info">
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">가격: 30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <div
+                    class="book-image"
+                    style="background-image: url('/images/preparingImage.png')"
+                  ></div>
+                  <div class="book_info">
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">가격: 30,000원</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="book_item">
+              <a href="#">
+                <h4 class="category back">백엔드</h4>
+                <div class="book-container">
+                  <div
+                    class="book-image"
+                    style="background-image: url('/images/preparingImage.png')"
+                  ></div>
+                  <div class="book_info">
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">가격: 30,000원</p>
                   </div>
                 </div>
               </a>
@@ -72,7 +112,7 @@
                 <div class="book-container">
                   <img
                     class="book-image"
-                    src="/images/noImage.png"
+                    src="/images/preparingImage.png"
                     alt="도서준비"
                   />
                   <div>
@@ -88,7 +128,7 @@
                 <div class="book-container">
                   <img
                     class="book-image"
-                    src="/images/noImage.png"
+                    src="/images/preparingImage.png"
                     alt="도서준비"
                   />
                   <div>
@@ -104,7 +144,7 @@
                 <div class="book-container">
                   <img
                     class="book-image"
-                    src="/images/noImage.png"
+                    src="/images/preparingImage.png"
                     alt="도서준비"
                   />
                   <div>
@@ -115,24 +155,20 @@
               </a>
             </li>
             <li class="book_item">
-              <a href="#"
-                ><img class="book-image" src="/images/noImage.png" alt=""
-              /></a>
-            </li>
-            <li class="book_item">
-              <a href="#"
-                ><img class="book-image" src="/images/noImage.png" alt=""
-              /></a>
-            </li>
-            <li class="book_item">
-              <a href="#"
-                ><img class="book-image" src="/images/noImage.png" alt=""
-              /></a>
-            </li>
-            <li class="book_item">
-              <a href="#"
-                ><img class="book-image" src="/images/noImage.png" alt=""
-              /></a>
+              <a href="#">
+                <h4 class="category front">프론트엔드</h4>
+                <div class="book-container">
+                  <img
+                    class="book-image"
+                    src="/images/preparingImage.png"
+                    alt="도서준비"
+                  />
+                  <div>
+                    <h5 class="book_name">리액트 도서</h5>
+                    <p class="book_price">30,000원</p>
+                  </div>
+                </div>
+              </a>
             </li>
           </ul>
         </article>
@@ -147,6 +183,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      const books = document.querySelectorAll('.book_item');
+      books.forEach((el) => {
+        // mouseover
+        el.addEventListener('mouseover', (e) => {
+          for (let book of books) {
+            book.classList.add('blurred');
+          }
+          e.currentTarget.classList.remove('blurred');
+        });
+        // mouseleave
+        el.addEventListener('mouseleave', (e) => {
+          for (let book of books) {
+            book.classList.remove('blurred');
+          }
+        });
+      });
+
       const swiper = new Swiper('.swiper', {
         // 스와이프 옵션
         direction: 'horizontal',

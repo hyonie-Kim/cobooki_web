@@ -25,11 +25,11 @@ aside {
 
 section {
   width: 100%;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 
 article {
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 /* 광고배너 */
@@ -67,21 +67,40 @@ article {
 .books_container {
 }
 .books_container > h2 {
-  margin-left: 30px;
+  /* margin-left: 30px; */
+  margin-left: 3%;
   width: 94%;
   padding-bottom: 10px;
   border-bottom: 2px solid #adadad;
 }
-.front {
+.category {
+  width: 100px;
   position: absolute;
   left: 0px;
-  background-color: green;
   color: white;
-  top: -40px;
+  top: -60px;
   border-radius: 50px;
   text-align: center;
-  line-height: 25px;
+  line-height: 30px;
   font-weight: bold;
+}
+.front {
+  /* background-color: rgb(135, 222, 173); */
+  background-color: #97cdb6;
+  color: #000000;
+}
+
+.cs {
+  /* background-color: rgb(129, 127, 255); */
+  background-color: #019875;
+}
+.back {
+  background-color: #d1e65b;
+  color: #000000;
+}
+
+.blurred {
+  opacity: 0.5;
 }
 
 /* 도서 */
@@ -97,8 +116,8 @@ article {
 
 .book_item {
   width: 240px;
-  /* height: 90%; */
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   outline: 2px solid #547f5b;
   border-radius: 10px;
@@ -107,6 +126,8 @@ article {
   cursor: pointer;
 }
 .book_item > a {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -115,34 +136,41 @@ article {
 
 .book-image {
   width: 100%;
-  height: 75%;
+  height: 240px;
   margin: auto 0px;
+  background-color: white;
   background-size: contain;
-  background-position: -5px 40px;
+  background-position: 0px 40px;
   background-repeat: no-repeat;
 }
 
 .book_info {
-  width: 90%;
+  width: 100%;
   height: 20%;
   padding-top: 10px;
+}
+
+.book_name {
+  /* margin-bottom: 10px; */
+  margin: 0 10px;
+}
+.book_price {
+  /* font-weight: bold; */
+  font-size: 15px;
+  margin: 0;
 }
 .books_list {
   height: 80%;
   display: grid;
-  /* gap: 15px; */
-  gap: 5px;
+  gap: 98px 5px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding: 0;
+  margin-top: 80px;
 }
 
 .books_list li {
   text-align: center;
 }
-
-/* .books_list li a img {
-  width: 200px;
-} */
 
 #wrap {
   height: auto;
@@ -173,6 +201,13 @@ article {
   aside {
     padding-top: 120px;
   }
+
+  .books_container > h2 {
+    margin-left: 5%;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #adadad;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -184,6 +219,13 @@ article {
     width: 100%;
     height: 380px;
   }
+
+  .books_container > h2 {
+    margin-left: 1%;
+    width: 98%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #adadad;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -194,5 +236,11 @@ article {
   aside {
     width: 100%;
     height: 400px;
+  }
+  .books_container > h2 {
+    margin-left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #adadad;
   }
 }
