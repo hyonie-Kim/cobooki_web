@@ -1,0 +1,130 @@
+.detail_container {
+  font-family: 'NanumSquareNeo-Variable';
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 130px;
+  max-width: 900px;
+  height: 490px;
+  margin: auto;
+  /* border: 1px solid rebeccapurple; */
+}
+
+.detail_bookCover {
+  background-color: white;
+  width: 340px;
+  height: 90%;
+}
+
+.detail_bookCover > img {
+  width: 340px;
+  height: 300px;
+  margin-top: 10px;
+  padding: 10% 0 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* border: 1px solid firebrick; */
+}
+
+.detail_info {
+  width: 620px;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.detail_info_category {
+  width: 100px;
+  background-color: #97cdb6;
+  color: #000000;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.detail_price_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 550px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+/* 책이름 */
+.detail_info_name {
+  width: 50%;
+  margin: 8px 0;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+/* 책가격 */
+.detail_info_price {
+  border: none;
+  width: 100px;
+  margin: 10px 0 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: rgb(86, 174, 92);
+}
+
+.detail-text {
+  height: 230px;
+  width: fit-content;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.detail_info_price_text {
+  text-align: right;
+  font-size: 18px;
+}
+
+.detail_explain_box {
+  border-bottom: #59595959 solid 1px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detail_cart_payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 20px;
+  border-top: 0.7px solid #9999;
+}
+.detail_add_cart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 135px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 14px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.detail_payment_btn {
+  width: 140px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  background-color: #547f5b;
+  border: #547f5b;
+  color: #ffff;
+  border-radius: 50px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상세페이지</title>
+    <link rel="stylesheet" href="detailPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // 헤더와 푸터를 동적으로 로드하는 함수
+      function includeHTML() {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+      }
+    </script>
+  </head>
+  <body onload="includeHTML()">
+    <!-- 헤더를 로드할 div -->
+    <div id="header"></div>
+    <form action="" class="detail_container">
+      <div class="detail_bookCover">
+        <img
+          src="/images/sampleBook.jfif"
+          alt=""
+          style="width: 100%; padding: auto"
+        />
+        <!-- <img src="/images/preparingImage.png" alt="" /> -->
+      </div>
+      <div class="detail_info">
+        <div class="detail_box">
+          <div class="detail_info_category">프론트엔드</div>
+          <div class="detail_price_box">
+            <input
+              type="text"
+              class="detail_info_name"
+              value="리액트를 다루는 기술(개정판)"
+              disabled
+            />
+            <input
+              type="text"
+              class="detail_info_price"
+              value="27,000"
+              disabled
+            />
+            <span class="detail_info_price_text">원</span>
+          </div>
+        </div>
+        <div class="detail_explain_box">
+          <div class="detail_explain_title">상품 설명</div>
+        </div>
+        <div class="detail-text">
+          <p>
+            리액트를 다루는 기술 개정판이 나왔습니다. 리액트 16.8 버전에
+            Hooks라는 기능이 도입되면서 함수형 컴포넌트에서도 상태 관리를 할 수
+            있게 되었습니다. 이에 맞춰 책에 사용된 주요 예시를 모두 함수형
+            컴포넌트 형태로 전환했습니다. 기존 내용을 보강 및 개선하고, 초판에
+            다루지 않았던 새로운 내용도 많이 수록했습니다. 리액트의 빅 팬이자
+            현업 프로그래머로서 리액트를 꾸준히 활용해 온 저자의 명쾌한 설명과
+            노하우가 더욱 알차게 담긴 개정판입니다.
+          </p>
+          <!-- <pre>
+리액트를 다루는 기술 개정판이 나왔습니다. 
+리액트 16.8 버전에 Hooks라는 기능이 도입되면서 함수형 컴포넌트에서도 상태 관리를 할 수 있게 되었습니다. 
+이에 맞춰 책에 사용된 주요 예시를 모두 함수형 컴포넌트 형태로 전환했습니다. 
+기존 내용을 보강 및 개선하고, 초판에 다루지 않았던 새로운 내용도 많이 수록했습니다. 리액트의 빅 팬이자 
+현업 프로그래머로서 리액트를 꾸준히 활용해 온 저자의 명쾌한 설명과 노하우가 더욱 알차게 담긴 개정판입니다.
+          </pre> -->
+        </div>
+
+        <div class="detail_cart_payment">
+          <button class="detail_add_cart">
+            <span class="material-symbols-outlined"> add_shopping_cart </span>
+            <span class="detail_add_cart_text">장바구니 담기</span>
+          </button>
+          <button class="detail_payment_btn">구매하기</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- 푸터를 로드할 div -->
+    <div id="footer"></div>
+  </body>
+</html>
