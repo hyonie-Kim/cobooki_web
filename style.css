@@ -155,9 +155,8 @@ article {
   margin: 0 10px;
 }
 .book_price {
-  /* font-weight: bold; */
-  font-size: 15px;
-  margin: 0;
+  font-size: 13px;
+  margin: 8px 0 0 0;
 }
 .books_list {
   height: 80%;
