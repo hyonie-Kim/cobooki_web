@@ -19,17 +19,10 @@ aside {
   width: 100%;
   padding-top: 103px;
   height: 330px;
-
-  /* height: 90%; */
 }
 
 section {
   width: 100%;
-  /* background-color: blanchedalmond; */
-}
-
-article {
-  /* border: 1px solid grey; */
 }
 
 /* 광고배너 */
@@ -40,17 +33,10 @@ article {
   box-sizing: border-box;
 }
 
+/* 배너 이미지 */
 .swiper-slide {
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  bottom: 200px;
 }
 
 .first-Banner {
@@ -66,6 +52,7 @@ article {
 /* 서적리스트 */
 .books_container {
 }
+
 .books_container > h2 {
   /* margin-left: 30px; */
   margin-left: 3%;

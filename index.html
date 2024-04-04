@@ -1,217 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Cobooki</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      // 헤더와 푸터를 동적으로 로드하는 함수
-      function includeHTML() {
-        $('#header').load('header.html');
-        $('#footer').load('footer.html');
-      }
-    </script>
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
 
-  <body onload="includeHTML()">
-    <!-- 헤더를 로드할 div -->
-    <div id="header"></div>
-    <div id="wrap">
-      <aside class="banner">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide first-Banner"></div>
-            <div class="swiper-slide second-Banner"></div>
-            <div class="swiper-slide third-Banner"></div>
-            ...
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- jQuery CDN  -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="module" src="./main_book.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Cobooki</title>
+  <script>
+    // 헤더와 푸터를 동적으로 로드하는 함수
+    function includeHTML() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+    }
+  </script>
+</head>
+
+<body onload="includeHTML()">
+  <!-- 헤더를 로드할 div -->
+  <div id="header"></div>
+  <div id="wrap">
+    <aside class="banner">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide first-Banner"></div>
+          <div class="swiper-slide second-Banner"></div>
+          <div class="swiper-slide third-Banner"></div>
         </div>
-      </aside>
-      <section>
-        <article class="books_container">
-          <h2>최신서적</h2>
-          <ul class="books_list">
-            <li class="book_item">
-              <a href="/detailPage.html">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  >
-                    <img src="/images/sampleBook.jfif" style="width: 180px" />
-                  </div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트를 다루는 기술</h5>
-                    <p class="book_price">가격: 29,400원</p>
-                  </div>
+      </div>
+    </aside>
+    <section>
+      <article class="books_container">
+        <h2>최신서적</h2>
+        <ul class="books_list">
+          <li class="book_item">
+            <a href="/detailPage.html">
+              <h4 class="category front">프론트엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')">
+                  <img src="/images/sampleBook.jfif" style="width: 180px" />
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category cs">CS지식</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트를 다루는 기술</h5>
+                  <p class="book_price">가격: 29,400원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category cs">CS지식</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category front">프론트엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category back">백엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category back">백엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category back">백엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category cs">CS지식</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category front">프론트엔드</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
                 </div>
-              </a>
-            </li>
-          </ul>
-        </article>
-      </section>
-    </div>
-    <!-- 푸터를 로드할 div -->
-    <div id="footer"></div>
+              </div>
+            </a>
+          </li>
+          <li class="book_item">
+            <a href="#">
+              <h4 class="category cs">CS지식</h4>
+              <div class="book-container">
+                <div class="book-image" style="background-image: url('/images/preparingImage.png')"></div>
+                <div class="book_info">
+                  <h5 class="book_name">리액트 도서</h5>
+                  <p class="book_price">가격: 30,000원</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </div>
+  <!-- 푸터를 로드할 div -->
+  <div id="footer"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const books = document.querySelectorAll('.book_item');
-      books.forEach((el) => {
-        // mouseover
-        el.addEventListener('mouseover', (e) => {
-          for (let book of books) {
-            book.classList.add('blurred');
-          }
-          e.currentTarget.classList.remove('blurred');
-        });
-        // mouseleave
-        el.addEventListener('mouseleave', (e) => {
-          for (let book of books) {
-            book.classList.remove('blurred');
-          }
-        });
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const books = document.querySelectorAll('.book_item');
+    books.forEach((el) => {
+      // mouseover
+      el.addEventListener('mouseover', (e) => {
+        for (let book of books) {
+          book.classList.add('blurred');
+        }
+        e.currentTarget.classList.remove('blurred');
       });
-
-      const swiper = new Swiper('.swiper', {
-        // 스와이프 옵션
-        direction: 'horizontal',
-        // loop: true,
-        centeredSlides: true,
-
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+      // mouseleave
+      el.addEventListener('mouseleave', (e) => {
+        for (let book of books) {
+          book.classList.remove('blurred');
+        }
       });
-    </script>
-  </body>
+    });
+
+    const swiper = new Swiper('.swiper', {
+      // 스와이프 옵션
+      direction: 'horizontal',
+      // loop: true,
+      centeredSlides: true,
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
 </html>
