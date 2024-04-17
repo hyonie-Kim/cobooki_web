@@ -155,3 +155,46 @@ li {
     padding: 8px 30px;
   }
 }
+
+/* 검색어 창 스타일 */
+.nav_search {
+  display: flex;
+  align-items: center;
+}
+
+.search_form {
+  position: relative;
+}
+
+.search_input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 220px;
+  transition: width 0.3s ease-in-out;
+}
+
+.search_input:focus {
+  width: 270px; /* 검색어 입력 시 너비 확장 */
+}
+
+.search_button {
+  background-color: #547f5b; /* 검색 버튼 배경색 */
+  color: #fff; /* 검색 버튼 글자색 */
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-left: -40px; /* 버튼을 입력창에 겹치게 위치 */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search_button:hover {
+  background-color: #0056b3; /* 마우스 호버 시 배경색 변경 */
+}
+
+/* 아이콘 위치 조정 */
+.fa-search {
+  margin-right: 4px;
+}

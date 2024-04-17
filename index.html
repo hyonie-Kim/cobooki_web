@@ -14,6 +14,7 @@
         $('#footer').load('footer.html');
       }
     </script>
+    <script type="module" src="./index.js"></script>
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -40,131 +41,8 @@
       </aside>
       <section>
         <article class="books_container">
-          <h2>최신서적</h2>
-          <ul class="books_list">
-            <li class="book_item">
-              <a href="/detailPage.html">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  >
-                    <img src="/images/sampleBook.jfif" style="width: 180px" />
-                  </div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트를 다루는 기술</h5>
-                    <p class="book_price">가격: 29,400원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category cs">CS지식</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category back">백엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category front">프론트엔드</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="book_item">
-              <a href="#">
-                <h4 class="category cs">CS지식</h4>
-                <div class="book-container">
-                  <div
-                    class="book-image"
-                    style="background-image: url('/images/preparingImage.png')"
-                  ></div>
-                  <div class="book_info">
-                    <h5 class="book_name">리액트 도서</h5>
-                    <p class="book_price">가격: 30,000원</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
+          <h2></h2>
+          <ul class="books_list"></ul>
         </article>
       </section>
     </div>
@@ -172,46 +50,5 @@
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const books = document.querySelectorAll('.book_item');
-      books.forEach((el) => {
-        // mouseover
-        el.addEventListener('mouseover', (e) => {
-          for (let book of books) {
-            book.classList.add('blurred');
-          }
-          e.currentTarget.classList.remove('blurred');
-        });
-        // mouseleave
-        el.addEventListener('mouseleave', (e) => {
-          for (let book of books) {
-            book.classList.remove('blurred');
-          }
-        });
-      });
-
-      const swiper = new Swiper('.swiper', {
-        // 스와이프 옵션
-        direction: 'horizontal',
-        // loop: true,
-        centeredSlides: true,
-
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
   </body>
 </html>

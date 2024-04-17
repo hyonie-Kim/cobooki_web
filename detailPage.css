@@ -2,10 +2,10 @@
   font-family: 'NanumSquareNeo-Variable';
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 130px;
   max-width: 900px;
-  height: 490px;
+  /* height: 490px; */
   margin: auto;
   /* border: 1px solid rebeccapurple; */
 }
@@ -17,7 +17,7 @@
 }
 
 .detail_bookCover > img {
-  width: 340px;
+  /* width: 340px; */
   height: 300px;
   margin-top: 10px;
   padding: 10% 0 20px;
@@ -26,42 +26,50 @@
   /* border: 1px solid firebrick; */
 }
 
-.detail_info {
-  width: 620px;
+.book_container {
+  /* width: 620px; */
+  width: 100%;
   height: 450px;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.detail_box {
   margin-left: 30px;
 }
 .detail_info_category {
-  width: 100px;
+  /* width: 250px; */
   background-color: #97cdb6;
   color: #000000;
   border-radius: 50px;
   text-align: center;
   line-height: 30px;
-  font-weight: bold;
+
   margin-bottom: 15px;
 }
 
 .detail_price_box {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 550px;
-  text-align: center;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 45px;
 }
 
+.detail_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 20px;
+}
 /* 책이름 */
 .detail_info_name {
-  width: 50%;
   margin: 8px 0;
   font-size: 20px;
   background: transparent;
   border: none;
+  font-weight: bold;
 }
 
 /* 책가격 */
@@ -82,11 +90,6 @@
   line-height: 28px;
 }
 
-.detail_info_price_text {
-  text-align: right;
-  font-size: 18px;
-}
-
 .detail_explain_box {
   border-bottom: #59595959 solid 1px;
   padding-bottom: 15px;
@@ -99,9 +102,10 @@
 .detail_cart_payment {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
-  padding-top: 20px;
+
+  padding: 20px 0;
   border-top: 0.7px solid #9999;
 }
 .detail_add_cart {
@@ -127,4 +131,6 @@
   border: #547f5b;
   color: #ffff;
   border-radius: 50px;
+  margin-left: 25px;
+  cursor: pointer;
 }
