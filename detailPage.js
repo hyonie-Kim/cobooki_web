@@ -28,6 +28,7 @@ async function onPageLoad() {
 
 // API 요청
 async function fetchBookDetailsById(bookId) {
+  console.log(bookId);
   const apiUrl = `http://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=${API_KEY}&itemIdType=ISBN&ItemId=${bookId}&output=JS&Cover=MidBig&Version=20131101&OptResult=ebookList,usedList,reviewList
 `;
   const response = await fetch(apiUrl);

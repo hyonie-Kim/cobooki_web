@@ -9,6 +9,7 @@ async function fetchBooks() {
       `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${API_KEY}&Query=c언어&Cover=MidBig&QueryType=Title&MaxResults=12&start=1&SearchTarget=Book&output=js&Version=20131101&OptResult=Toc,Story,fulldescription`
     );
     const data = await response.json();
+    console.log('fetch API 응답 받은 결과', data);
     return data.item;
   } catch (error) {
     console.error('도서를 불러올수 없습니다.:', error);
@@ -50,9 +51,6 @@ displayBooks();
 function handleBookItemClick(book) {
   const bookId = book.isbn;
   window.location.href = `/detailPage.html?bookId=${bookId}`;
-
-  // 기본 동작 방지 (링크 이동 방지)
-  // event.preventDefault();
 }
 
 const booksContainer = document.querySelector('.books_list');
