@@ -32,7 +32,9 @@
           <form class="search_form">
             <input
               type="text"
+              onchange="onSearchButtonClick()"
               class="search_input"
+              id="search_input"
               placeholder="검색어를 입력하세요"
             />
             <button type="submit" class="search_button">
@@ -54,5 +56,12 @@
         ></a>
       </nav>
     </header>
+    <script>
+      function onSearchButtonClick() {
+        let searchInput =
+          document.getElementsByClassName('.search_input').value;
+        console.log(searchInput);
+      }
+    </script>
   </body>
 </html>

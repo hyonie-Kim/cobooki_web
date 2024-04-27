@@ -6,7 +6,8 @@ const API_KEY = config.API_KEY;
 async function fetchBooks() {
   try {
     const response = await fetch(
-      `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${API_KEY}&Query=c언어&Cover=MidBig&QueryType=Title&MaxResults=12&start=1&SearchTarget=Book&output=js&Version=20131101&OptResult=Toc,Story,fulldescription`
+      `http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${API_KEY}&QueryType=ItemNewAll&MaxResults=12&start=1&SearchTarget=Book&CategoryId=351&Cover=MidBig&output=JS&Version=20131101`
+      // `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${API_KEY}&Query=c언어&Cover=MidBig&QueryType=Title&MaxResults=12&start=1&SearchTarget=Book&output=js&Version=20131101&OptResult=Toc,Story,fulldescription`
     );
     const data = await response.json();
     console.log('fetch API 응답 받은 결과', data);
